@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="target_x" default="0.5" />
+  <arg name="target_y" default="0.5" />
+
+  <param name="target_x" value="$(arg target_x)" />
+  <param name="target_y" value="$(arg target_y)" />
+  
+  <node pkg="tortoisebot_waypoints" type="reset_world_client.py" name="reset_world_client" />
+  <node pkg="tortoisebot_waypoints" type="tortoisebot_action_server.py" name="tortoisebot_as" />
+  <test test-name="test_waypoints" pkg="tortoisebot_waypoints" type="test_waypoints_reached.py" />
+  <!-- For fail case -->
+  <!-- <test test-name="test_waypoints" pkg="tortoisebot_waypoints" type="test_waypoints_fail.py" /> -->
+</launch>
