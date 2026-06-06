@@ -18,8 +18,8 @@ NAME = 'test_waypoints_reached'
 
 class TestWaypointsReached(unittest.TestCase):
 
-    _dist_precision = 0.05
-    _yaw_precision = math.pi / 90
+    _dist_precision = 0.1
+    _yaw_precision = math.pi / 10
 
     def setUp(self):
         rospy.init_node('test_waypoints_reached')

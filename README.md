@@ -21,6 +21,11 @@ cd ~/simulation_ws && catkin_make && source devel/setup.bash
 
 > The test launch file starts the action server automatically, so no need to run `rosrun` separately.
 
+Just to test if action server is working as intended.
+```bash
+source ~/simulation_ws/devel/setup.bash
+rostopic pub /tortoisebot_as/goal tortoisebot_waypoints/WaypointActionActionGoal "{header: {seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''}, goal_id: {stamp: {secs: 0, nsecs: 0}, id: ''}, goal: {position: {x: 0.5, y: 0.5, z: 0.0}}}"
+```
 ---
 
 ## Running Tests

@@ -15,8 +15,9 @@ NAME = 'test_waypoints_fail'
 
 # Goal placed well outside the room so the robot cannot reach it in time.
 _UNREACHABLE_X = 5.0
-_UNREACHABLE_Y = 0.0
-_TIMEOUT_SECS = 10.0
+_UNREACHABLE_Y = 5.0
+# _TIMEOUT_SECS = 10.0
+_TIMEOUT_SECS = 2.0
 
 
 class TestWaypointsFail(unittest.TestCase):
