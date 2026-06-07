@@ -8,7 +8,10 @@
   
   <node pkg="tortoisebot_waypoints" type="reset_world_client.py" name="reset_world_client" />
   <node pkg="tortoisebot_waypoints" type="tortoisebot_action_server.py" name="tortoisebot_as" />
-  <test test-name="test_waypoints" pkg="tortoisebot_waypoints" type="test_waypoints_reached.py" />
-  <!-- For fail case -->
-  <!-- <test test-name="test_waypoints" pkg="tortoisebot_waypoints" type="test_waypoints_fail.py" /> -->
+
+  <!-- Pass Condition -->
+  <!-- <test test-name="test_waypoints" pkg="tortoisebot_waypoints" type="test_waypoints_reached.py" /> -->
+  <!-- Fail condition -->
+  <test test-name="test_waypoints" pkg="tortoisebot_waypoints" type="test_waypoints_fail.py" />
+  
 </launch>
